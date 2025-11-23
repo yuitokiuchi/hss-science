@@ -9,17 +9,17 @@
 :root {
   /* Base */
   --color-background: #ffffff;
-  --color-foreground: #0f172a; /* slate-900 */
+  --color-foreground: #11182c; /* MIT-like Dark Blue */
 
   /* Public Theme (Minimal Mono) */
-  --color-primary: #0f172a; /* slate-900 */
+  --color-primary: #11182c; /* MIT-like Dark Blue */
   --color-primary-foreground: #ffffff;
-  --color-secondary: #f8fafc; /* slate-50 */
-  --color-secondary-foreground: #0f172a;
+  --color-secondary: #f1f5f9; /* slate-100 */
+  --color-secondary-foreground: #11182c;
   
   /* Admin Theme (Functional) */
   --color-admin-bg: #f8fafc; /* slate-50 */
-  --color-admin-sidebar: #1e293b; /* slate-800 */
+  --color-admin-sidebar: #11182c; /* MIT-like Dark Blue */
   --color-admin-sidebar-fg: #f8fafc;
 }
 
