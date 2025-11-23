@@ -1,5 +1,5 @@
 import { FlaskConical, Microscope, Telescope, Cpu, Bot } from 'lucide-react';
-import { PageHeader } from '../../../shared/components/PageHeader';
+import { StandardPageLayout } from '../layouts/StandardPageLayout';
 
 export function ActivitiesPage() {
   const teams = [
@@ -46,104 +46,107 @@ export function ActivitiesPage() {
   ];
 
   return (
-    <div className="pt-12 md:pt-20 px-6 md:px-12 max-w-7xl mx-auto">
-      <PageHeader 
-        title="Activities" 
-        subtitle="5つの専門班に分かれ、それぞれの興味・関心を深めています。"
-      />
+    <StandardPageLayout pageTitle="Activities">
+      <div className="max-w-6xl">
+        <h2 className="text-3xl md:text-5xl font-bold text-[#11182c] leading-tight mb-12 tracking-tight">
+          5つの専門班に分かれ、<br/>
+          それぞれの興味・関心を深めています。
+        </h2>
 
-      {/* MIT Style Data Grid */}
-      <div className="mb-24">
-        <div className="border-t-[6px] border-red-600 pt-2 mb-12">
-          <h2 className="text-4xl font-black text-[#11182c] tracking-tighter uppercase">Teams Overview</h2>
-          <p className="text-red-600 font-bold font-mono mt-2">DATA AS OF 2025</p>
-        </div>
-        
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          {/* Left Column: Data List */}
-          <div className="lg:col-span-7">
-            <div className="border-t border-red-600">
-              {teams.map((team) => (
-                <div key={team.id} className="grid grid-cols-12 py-4 border-b border-red-200 items-center group hover:bg-red-50 transition-colors cursor-pointer">
+        {/* MIT Style Data Grid */}
+        <div className="mb-24">
+          <div className="border-t-[6px] border-red-600 pt-2 mb-12">
+            <h2 className="text-2xl font-bold text-[#11182c] tracking-tight uppercase">Teams Overview</h2>
+            <p className="text-red-600 font-bold font-mono mt-2 text-sm">DATA AS OF 2025</p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            {/* Left Column: Data List */}
+            <div className="lg:col-span-7">
+              <div className="border-t border-red-600">
+                {teams.map((team) => (
+                  <div key={team.id} className="grid grid-cols-12 py-4 border-b border-red-200 items-center group hover:bg-red-50 transition-colors cursor-pointer">
+                    <div className="col-span-8 pl-2">
+                      <span className="text-lg font-bold text-[#11182c] block group-hover:text-red-700 transition-colors">{team.name}</span>
+                      <span className="text-[10px] font-bold text-red-400 uppercase tracking-wider">{team.label}</span>
+                    </div>
+                    <div className="col-span-4 text-right pr-2">
+                      <span className="text-xl font-bold text-[#11182c] font-mono">{team.members}</span>
+                      <span className="text-[10px] font-bold text-slate-400 ml-2 uppercase">Members</span>
+                    </div>
+                  </div>
+                ))}
+                <div className="grid grid-cols-12 py-4 border-b-4 border-red-600 items-center bg-slate-50">
                   <div className="col-span-8 pl-2">
-                    <span className="text-xl font-bold text-[#11182c] block group-hover:text-red-700 transition-colors">{team.name}</span>
-                    <span className="text-xs font-bold text-red-400 uppercase tracking-wider">{team.label}</span>
+                    <span className="text-lg font-black text-[#11182c] uppercase tracking-tight">Total Members</span>
                   </div>
                   <div className="col-span-4 text-right pr-2">
-                    <span className="text-2xl font-black text-[#11182c] font-mono">{team.members}</span>
-                    <span className="text-xs font-bold text-slate-400 ml-2 uppercase">Members</span>
+                    <span className="text-2xl font-black text-red-600 font-mono">59</span>
                   </div>
-                </div>
-              ))}
-              <div className="grid grid-cols-12 py-4 border-b-4 border-red-600 items-center bg-slate-50">
-                <div className="col-span-8 pl-2">
-                  <span className="text-xl font-black text-[#11182c] uppercase tracking-tight">Total Members</span>
-                </div>
-                <div className="col-span-4 text-right pr-2">
-                  <span className="text-3xl font-black text-red-600 font-mono">59</span>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Right Column: Images / Context */}
-          <div className="lg:col-span-5 flex flex-col gap-8">
-            <div className="border-t border-red-600 pt-4">
-              <div className="aspect-video bg-slate-100 relative mb-2 group overflow-hidden">
-                <div className="absolute inset-0 bg-slate-200 transition-transform duration-700 group-hover:scale-105"></div>
-                <div className="absolute top-0 left-0 bg-red-600 text-white px-3 py-1 text-sm font-bold font-mono">FIG. A</div>
-              </div>
-              <p className="text-sm font-medium text-slate-600 leading-tight">
-                <strong className="text-[#11182c]">Figure A.</strong> Students conducting chemical experiments during the annual culture festival.
-              </p>
-            </div>
-            
-            <div className="border-t border-red-600 pt-4">
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <div className="aspect-square bg-slate-100 relative mb-2 group overflow-hidden">
-                    <div className="absolute inset-0 bg-slate-200 transition-transform duration-700 group-hover:scale-105"></div>
-                    <div className="absolute top-0 left-0 bg-red-600 text-white px-2 py-1 text-xs font-bold font-mono">FIG. B</div>
-                  </div>
+            {/* Right Column: Images / Context */}
+            <div className="lg:col-span-5 flex flex-col gap-8">
+              <div className="border-t border-red-600 pt-4">
+                <div className="aspect-video bg-slate-100 relative mb-2 group overflow-hidden">
+                  <div className="absolute inset-0 bg-slate-200 transition-transform duration-700 group-hover:scale-105"></div>
+                  <div className="absolute top-0 left-0 bg-red-600 text-white px-3 py-1 text-xs font-bold font-mono">FIG. A</div>
                 </div>
-                <div className="flex flex-col justify-center">
-                   <p className="text-sm font-medium text-slate-600 leading-tight">
-                    <strong className="text-[#11182c]">Figure B.</strong> Robotics team members adjusting their autonomous vehicle.
-                  </p>
+                <p className="text-xs font-medium text-slate-600 leading-tight">
+                  <strong className="text-[#11182c]">Figure A.</strong> Students conducting chemical experiments during the annual culture festival.
+                </p>
+              </div>
+              
+              <div className="border-t border-red-600 pt-4">
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="aspect-square bg-slate-100 relative mb-2 group overflow-hidden">
+                      <div className="absolute inset-0 bg-slate-200 transition-transform duration-700 group-hover:scale-105"></div>
+                      <div className="absolute top-0 left-0 bg-red-600 text-white px-2 py-1 text-[10px] font-bold font-mono">FIG. B</div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col justify-center">
+                     <p className="text-xs font-medium text-slate-600 leading-tight">
+                      <strong className="text-[#11182c]">Figure B.</strong> Robotics team members adjusting their autonomous vehicle.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Detailed List */}
-      <div className="grid grid-cols-1 gap-12 mb-20">
-        {teams.map((team) => (
-          <div key={team.id} className="group grid grid-cols-1 md:grid-cols-12 gap-8 border-t border-slate-200 pt-12">
-            <div className="md:col-span-4 lg:col-span-3">
-              <div className="w-16 h-16 bg-slate-100 flex items-center justify-center mb-6 group-hover:bg-[#11182c] transition-colors duration-300">
-                <team.icon className="w-8 h-8 text-[#11182c] group-hover:text-white transition-colors duration-300" />
+        {/* Detailed List */}
+        <div className="grid grid-cols-1 gap-12 mb-20">
+          {teams.map((team) => (
+            <div key={team.id} className="group grid grid-cols-1 md:grid-cols-12 gap-8 border-t border-slate-200 pt-12">
+              <div className="md:col-span-4 lg:col-span-3">
+                <div className="w-12 h-12 bg-slate-100 flex items-center justify-center mb-6 group-hover:bg-[#11182c] transition-colors duration-300">
+                  <team.icon className="w-6 h-6 text-[#11182c] group-hover:text-white transition-colors duration-300" />
+                </div>
+                <h2 className="text-2xl font-bold text-[#11182c] uppercase tracking-tight mb-2">{team.name}</h2>
+                <span className="inline-block bg-slate-100 text-[#11182c] text-[10px] font-bold px-2 py-1 uppercase tracking-wider">
+                  {team.label}
+                </span>
               </div>
-              <h2 className="text-3xl font-black text-[#11182c] uppercase tracking-tight mb-2">{team.name}</h2>
-              <span className="inline-block bg-slate-100 text-[#11182c] text-xs font-bold px-3 py-1 uppercase tracking-wider">
-                {team.label}
-              </span>
-            </div>
-            <div className="md:col-span-8 lg:col-span-9">
-              <p className="text-lg text-slate-600 leading-relaxed">
-                {team.desc}
-              </p>
-              <div className="mt-8">
-                <a href={`/articles?category=${team.id}`} className="inline-flex items-center font-bold text-[#11182c] hover:underline decoration-2 underline-offset-4">
-                  View Related Articles →
-                </a>
+              <div className="md:col-span-8 lg:col-span-9">
+                <p className="text-base text-slate-600 leading-relaxed">
+                  {team.desc}
+                </p>
+                <div className="mt-6">
+                  <a href={`/articles?category=${team.id}`} className="inline-flex items-center text-sm font-bold text-[#11182c] hover:underline decoration-2 underline-offset-4">
+                    View Related Articles →
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </StandardPageLayout>
   );
 }
+
 
