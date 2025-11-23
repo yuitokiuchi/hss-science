@@ -12,7 +12,7 @@ export function StandardPageLayout({ pageTitle, children }: StandardPageLayoutPr
         {/* Left Sidebar: Vertical Text */}
         <div className="hidden lg:block relative">
           <div className="sticky top-32 border-l border-slate-300 pl-6 py-2">
-            <h1 className="text-xl font-medium text-slate-400 uppercase tracking-widest [writing-mode:vertical-lr] rotate-180 whitespace-nowrap select-none">
+            <h1 className="text-xl font-medium text-[#11182c] uppercase tracking-widest [writing-mode:vertical-lr] whitespace-nowrap select-none">
               {pageTitle}
             </h1>
           </div>
