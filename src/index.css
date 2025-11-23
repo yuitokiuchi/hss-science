@@ -1,8 +1,9 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
 
 @theme {
-  --font-sans: "Noto Sans JP", sans-serif;
+  --font-sans: "Inter", "Noto Sans JP", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
 }
 
 :root {
@@ -10,10 +11,10 @@
   --color-background: #ffffff;
   --color-foreground: #0f172a; /* slate-900 */
 
-  /* Public Theme (Clean Science) */
-  --color-primary: #2563eb; /* blue-600 */
+  /* Public Theme (Minimal Mono) */
+  --color-primary: #0f172a; /* slate-900 */
   --color-primary-foreground: #ffffff;
-  --color-secondary: #f1f5f9; /* slate-100 */
+  --color-secondary: #f8fafc; /* slate-50 */
   --color-secondary-foreground: #0f172a;
   
   /* Admin Theme (Functional) */
