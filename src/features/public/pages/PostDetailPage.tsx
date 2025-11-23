@@ -48,8 +48,8 @@ export function PostDetailPage() {
         {/* Content Body */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-9">
-            <div className="prose prose-lg prose-slate max-w-none">
-              <p className="lead text-xl font-light text-slate-600 leading-relaxed mb-8 border-l-4 border-red-600 pl-6">
+            <div className="prose prose-slate max-w-none">
+              <p className="lead text-lg font-light text-slate-600 leading-relaxed mb-8 border-l-4 border-red-600 pl-6">
                 過酸化水素水の分解反応は、触媒の存在下で劇的に加速します。本実験では、一般に「象の歯磨き粉」として知られるこの反応について、触媒の種類と量が反応速度に与える影響を定量的に測定しました。
               </p>
 

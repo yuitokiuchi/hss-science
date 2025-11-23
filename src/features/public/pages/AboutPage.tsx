@@ -4,7 +4,7 @@ export function AboutPage() {
   return (
     <StandardPageLayout pageTitle="About Us">
       <div className="max-w-4xl">
-        <h2 className="text-3xl md:text-5xl font-bold text-[#11182c] leading-tight mb-12 tracking-tight">
+        <h2 className="text-2xl md:text-4xl font-bold text-[#11182c] leading-tight mb-12 tracking-tight">
           平塚中等教育学校科学部は、<br/>
           生徒の自主性を重んじ、<br/>
           自由な発想で科学を探求するコミュニティです。
@@ -15,21 +15,21 @@ export function AboutPage() {
           <div className="lg:col-span-7 space-y-16">
             <section className="border-t border-slate-200 pt-8">
               <h3 className="text-sm font-bold text-red-600 mb-4 uppercase tracking-widest">Mission</h3>
-              <p className="text-lg text-slate-700 leading-relaxed font-medium">
+              <p className="text-base text-slate-700 leading-relaxed font-medium">
                 私たちは「なぜ？」という純粋な問いを大切にします。教科書に書かれていることを覚えるだけでなく、実際に手を動かし、観察し、データを取ることで、自然現象の裏にある法則を自らの手で解き明かすことを目指しています。
               </p>
             </section>
 
             <section className="border-t border-slate-200 pt-8">
               <h3 className="text-sm font-bold text-red-600 mb-4 uppercase tracking-widest">History</h3>
-              <p className="text-lg text-slate-700 leading-relaxed font-medium">
+              <p className="text-base text-slate-700 leading-relaxed font-medium">
                 創部以来、多くの生徒がここで科学の楽しさに触れてきました。文化祭での展示発表、外部コンテストへの出場、そして日々の地道な研究活動を通じて、論理的思考力と探求心を育んでいます。
               </p>
             </section>
 
             <section className="border-t border-slate-200 pt-8">
               <h3 className="text-sm font-bold text-red-600 mb-4 uppercase tracking-widest">Location</h3>
-              <p className="text-lg text-slate-700 leading-relaxed font-medium">
+              <p className="text-base text-slate-700 leading-relaxed font-medium">
                 主に物理室・化学室・生物室を使用し、放課後に活動しています。恵まれた実験設備を活用し、本格的な実験に取り組むことができます。
               </p>
             </section>

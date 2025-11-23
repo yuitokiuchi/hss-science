@@ -27,6 +27,13 @@ export function StandardPageLayout({ pageTitle, children }: StandardPageLayoutPr
 
         {/* Main Content */}
         <div className="min-w-0">
+          {/* Breadcrumb */}
+          <div className="flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-12">
+            <a href="/" className="hover:text-red-600 transition-colors">Home</a>
+            <span>/</span>
+            <span className="text-red-600">{pageTitle}</span>
+          </div>
+
           {children}
         </div>
       </div>

@@ -48,7 +48,7 @@ export function ActivitiesPage() {
   return (
     <StandardPageLayout pageTitle="Activities">
       <div className="max-w-6xl">
-        <h2 className="text-3xl md:text-5xl font-bold text-[#11182c] leading-tight mb-12 tracking-tight">
+        <h2 className="text-2xl md:text-4xl font-bold text-[#11182c] leading-tight mb-20 tracking-tight">
           5つの専門班に分かれ、<br/>
           それぞれの興味・関心を深めています。
         </h2>
@@ -118,30 +118,38 @@ export function ActivitiesPage() {
           </div>
         </div>
 
-        {/* Detailed List */}
-        <div className="grid grid-cols-1 gap-12 mb-20">
-          {teams.map((team) => (
-            <div key={team.id} className="group grid grid-cols-1 md:grid-cols-12 gap-8 border-t border-slate-200 pt-12">
-              <div className="md:col-span-4 lg:col-span-3">
-                <div className="w-12 h-12 bg-slate-100 flex items-center justify-center mb-6 group-hover:bg-[#11182c] transition-colors duration-300">
-                  <team.icon className="w-6 h-6 text-[#11182c] group-hover:text-white transition-colors duration-300" />
-                </div>
-                <h2 className="text-2xl font-bold text-[#11182c] uppercase tracking-tight mb-2">{team.name}</h2>
-                <span className="inline-block bg-slate-100 text-[#11182c] text-[10px] font-bold px-2 py-1 uppercase tracking-wider">
-                  {team.label}
-                </span>
-              </div>
-              <div className="md:col-span-8 lg:col-span-9">
-                <p className="text-base text-slate-600 leading-relaxed">
+        <div className="space-y-32">
+          {teams.map((team, index) => (
+            <section key={team.id} className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
+              {/* Left Column: Content */}
+              <div className="order-2 lg:order-1">
+                <div className="w-full h-[2px] bg-red-600 mb-8"></div>
+                <h3 className="text-3xl font-bold text-[#11182c] mb-6 tracking-tight">{team.name}</h3>
+                <p className="text-base text-slate-700 leading-relaxed mb-10">
                   {team.desc}
                 </p>
-                <div className="mt-6">
-                  <a href={`/articles?category=${team.id}`} className="inline-flex items-center text-sm font-bold text-[#11182c] hover:underline decoration-2 underline-offset-4">
-                    View Related Articles →
-                  </a>
-                </div>
+                <a 
+                  href={`/articles?category=${team.id}`} 
+                  className="inline-block border border-red-600 text-[#11182c] px-8 py-4 font-bold hover:bg-red-50 transition-colors text-sm uppercase tracking-wider"
+                >
+                  View {team.name} Articles
+                </a>
               </div>
-            </div>
+
+              {/* Right Column: Image */}
+              <div className="order-1 lg:order-2">
+                <div className="aspect-[4/3] bg-slate-100 relative mb-4 group overflow-hidden">
+                  <div className="absolute inset-0 bg-slate-200 transition-transform duration-700 group-hover:scale-105"></div>
+                  {/* Placeholder Icon as Image */}
+                  <div className="absolute inset-0 flex items-center justify-center text-slate-300">
+                    <team.icon className="w-24 h-24 opacity-20" />
+                  </div>
+                </div>
+                <p className="text-sm font-medium text-slate-600 leading-tight">
+                  <strong className="text-[#11182c]">Figure {index + 1}.</strong> Students from the {team.name} working on their projects.
+                </p>
+              </div>
+            </section>
           ))}
         </div>
       </div>
