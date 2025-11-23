@@ -1,1 +1,31 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+@theme {
+  --font-sans: "Noto Sans JP", sans-serif;
+}
+
+:root {
+  /* Base */
+  --color-background: #ffffff;
+  --color-foreground: #0f172a; /* slate-900 */
+
+  /* Public Theme (Clean Science) */
+  --color-primary: #2563eb; /* blue-600 */
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #f1f5f9; /* slate-100 */
+  --color-secondary-foreground: #0f172a;
+  
+  /* Admin Theme (Functional) */
+  --color-admin-bg: #f8fafc; /* slate-50 */
+  --color-admin-sidebar: #1e293b; /* slate-800 */
+  --color-admin-sidebar-fg: #f8fafc;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
