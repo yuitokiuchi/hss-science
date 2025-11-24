@@ -27,7 +27,7 @@ export function PublicLayout() {
       <header className="fixed top-0 left-0 right-0 bg-[#11182c] text-white z-50 h-16 md:h-24 shadow-md">
         <div className="w-full h-full flex items-center justify-between pl-4 md:pl-8 pr-0">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-4 group h-full py-3">
+          <Link to="/" className="flex items-center gap-4 group h-full py-1">
             {/* Logo Mark */}
             <img 
               src="/black_image.png" 
@@ -35,11 +35,11 @@ export function PublicLayout() {
               className="h-full w-auto invert opacity-100 group-hover:opacity-90 transition-opacity"
             />
 
-            <div className="flex flex-col justify-center h-full">
-              <span className="text-[10px] md:text-lg font-bold tracking-wide text-white leading-none uppercase mb-1">
+            <div className="flex flex-col justify-center h-full gap-0.5">
+              <span className="text-[10px] md:text-base font-bold tracking-tight text-white leading-none uppercase">
                 Hiratsuka Secondary School
               </span>
-              <span className="text-[10px] md:text-sm font-light tracking-wider text-slate-300 leading-none uppercase">
+              <span className="text-[10px] md:text-sm font-medium tracking-wide text-slate-300 leading-none uppercase">
                 Science Club
               </span>
             </div>
